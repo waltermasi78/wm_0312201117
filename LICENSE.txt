@@ -1,0 +1,9 @@
+MIT License
+
+Copyright (c) 2024 Masi Walter
+
+Permesso è concesso, gratuitamente, a chiunque ottenga una copia di questo software e dei relativi documenti di accompagnamento, di trattare nel software senza restrizioni, inclusi, a titolo esemplificativo ma non esaustivo, i diritti di usare, copiare, modificare, fondere, pubblicare, distribuire, sublicenziare e/o vendere copie del software, e di permettere alle persone a cui il software è fornito di fare lo stesso, con le seguenti condizioni:
+
+Il copyright e questa dichiarazione di licenza devono essere inclusi in tutte le copie o porzioni sostanziali del software.
+
+IL SOFTWARE È FORNITO "COSÌ COM'È", SENZA GARANZIE DI ALCUN TIPO, ESPRESSE O IMPLICITE, INCLUSA MA NON LIMITATA ALLA GARANZIA DI COMMERCIABILITÀ, IDONEITÀ A UNO SCOPO PARTICOLARE E NON VIOLAZIONE. IN NESSUN CASO GLI AUTORI O I TITOLARI DEI DIRITTI D'AUTORE POTRANNO ESSERE RITENUTI RESPONSABILI PER QUALUNQUE RIVENDICAZIONE, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE DI CONTRATTO, TORTO O ALTRIMENTI, DERIVANTE DA, O IN CONNESSIONE CON, IL SOFTWARE O L'UTILIZZO O ALTRE GESTIONI DEL SOFTWARE.
