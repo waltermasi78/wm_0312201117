@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Tag per SEO -->
+    <meta name="description" content="Ristorante WM-0312201117 con servizio di prenotazione tavoli online. Prenota facilmente il tuo tavolo con nome, numero di posti, data e ora.">
+    <meta name="keywords" content="ristorante, prenotazione, tavoli, online, mangiare, bevere, ristorante Mangia e Bevi">
+    <meta name="author" content="Ristorante WM-0312201117">
+    <meta name="robots" content="index, follow"> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+
+    <!-- Titolo della pagina -->
+    <title>Prenotazione Tavoli Online</title>
+
+    <!-- Collega i file CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Collega il file JS (defer per caricare dopo l'HTML) -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+	
+</head>
+<body>
+  <div class="slim-header">
+     <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('lista_prenotazioni') }}">Lista prenotazioni</a></li>
+        </ul>
+  </div>
+
+  <header>
+    <h1>Prenota il tuo tavolo</h1>
+  </header>
+  <div id="feedback-message" class="feedback"></div>
+
+  <section class="booking-form">
+    <h2>Modulo di prenotazione</h2>
+    <form id="prenotazioneForm" action="/prenotazione" method="post">
+      <input type="text" id="nominativo" name="nominativo" placeholder="Nominativo" required>
+      <input type="number" id="numeroPosti" name="numeroPosti" placeholder="Numero Posti" required>
+      <input type="date" id="data" name="data" required>
+      <input type="time" id="ora" name="ora" required>
+      <input type="text" id="contatto" name="contatto" placeholder="Contatto" required>
+      <button type="submit">Prenota</button>
+  </form>
+   </section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <p>&copy; 2024 | Ristorante WM-0312201117 - Prenotazione Tavoli</p>
+</footer>
+
+</body>
+</html>

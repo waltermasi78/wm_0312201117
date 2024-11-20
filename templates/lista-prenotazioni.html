@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Tag per SEO -->
+    <meta name="description" content="Ristorante WM-0312201117 con servizio di prenotazione tavoli online. Prenota facilmente il tuo tavolo con nome, numero di posti, data e ora.">
+    <meta name="keywords" content="ristorante, prenotazione, tavoli, online, mangiare, bevere, ristorante Mangia e Bevi">
+    <meta name="author" content="Ristorante WM-0312201117">
+    <meta name="robots" content="index, follow"> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+
+    <!-- Titolo della pagina -->
+    <title>Ristorante WM-0312201117 - Prenotazione Tavoli Online</title>
+
+    <!-- Collega i file CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Collega il file JS (defer per caricare dopo l'HTML) -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+	
+</head>
+<body>
+  <div class="slim-header">
+     <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('lista_prenotazioni') }}">Lista prenotazioni</a></li>
+        </ul>
+  </div>
+
+<header>
+
+    <h1>Lista prenotazioni</h1>
+  </header>
+
+    <div class="container">
+        <div class="card">
+            <div id="admin-area">
+               <p>Benvenuto nell'area di gestione delle prenotazioni. </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome Cliente</th>
+                            <th>Numero di Posti</th>
+                            <th>Data e Ora</th>
+                            <th>Telefono/Email</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservation-list">
+                        <!-- Le prenotazioni verranno inserite dinamicamente qui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per caricare le prenotazioni dal server
+        function loadReservations() {
+            fetch('/api/prenotazioni')
+                .then(response => response.json())
+                .then(data => {
+                    const reservationList = document.getElementById('reservation-list');
+                    reservationList.innerHTML = '';  // Pulisce la lista esistente
+                    data.forEach(prenotazione => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${prenotazione.nominativo}</td>
+                            <td>${prenotazione.numero_posti}</td>
+                            <td>${prenotazione.data} ${prenotazione.ora}</td>
+                            <td>${prenotazione.contatto}</td>
+                            <td>
+                                <button onclick="deleteReservation(${prenotazione.id})">Elimina</button>
+                            </td>
+                        `;
+                        reservationList.appendChild(row);
+                    });
+                });
+        }
+
+        // Funzione per eliminare una prenotazione
+        function deleteReservation(id) {
+            fetch(`/prenotazione/${id}`, {
+                method: 'DELETE',
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);  // Mostra un messaggio di conferma
+                loadReservations();    // Ricarica le prenotazioni
+            });
+        }
+
+        // Carica le prenotazioni al caricamento della pagina
+        window.onload = loadReservations;
+    </script>
+
+
+<!-- Footer -->
+
+
+<footer class="site-footer">
+    <p>&copy; 2024 | Ristorante WM-0312201117 - Prenotazione Tavoli</p>
+</footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

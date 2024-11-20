@@ -1,0 +1,392 @@
+/* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding-top: 20px; /* La stessa altezza del menu per evitare che venga coperto */
+}
+
+/* CARD */
+
+/* Contenitore centrale per la card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Occupiamo tutta l'altezza della pagina */
+    padding: 20px; /* Spazio interno per evitare che la card tocchi i bordi */
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Fa sì che la card occupi tutta la larghezza disponibile */
+    max-width: 900px; /* Limita la larghezza massima della card */
+    margin: 0 auto; /* Centra la card orizzontalmente */
+    box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza totale */
+}
+
+/* HEADER STYLES */
+.slim-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: right;
+}
+
+.slim-header a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+header {
+  background-color: #ff5a5f;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header img {
+  max-width: 350px;
+}
+
+header h1 {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+/* Stili per il menu fisso in cima alla pagina */
+nav {
+    position: fixed;  /* Imposta la posizione fissa */
+    top: 0;           /* Posiziona il menu in cima alla pagina */
+    left: 0;          /* Posiziona il menu all'inizio della larghezza */
+    width: 100%;      /* Fa sì che il menu occupi tutta la larghezza della pagina */
+    background-color: #333;  /* Colore di sfondo del menu */
+    color: white;     /* Colore del testo */
+    z-index: 1000;    /* Assicura che il menu si sovrapponga al contenuto */
+    padding: 10px 0;  /* Spaziatura sopra e sotto */
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+}
+
+/* Stili per gli elementi di navigazione nel menu */
+nav ul {
+    list-style: none;  /* Rimuove i pallini della lista */
+    margin: 0;         /* Rimuove i margini */
+    padding: 0;        /* Rimuove il padding */
+    display: flex;     /* Utilizza il layout a riga per gli elementi */
+    justify-content: center; /* Allinea gli elementi al centro */
+}
+
+nav ul li {
+    margin: 0 20px;    /* Spaziatura tra gli elementi */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: white;         /* Colore del testo */
+    font-size: 18px;      /* Dimensione del font */
+    position: relative;   /* Aggiungi posizione relativa per la sottolineatura */
+}
+
+/* Effetto di sottolineatura al passaggio del mouse */
+nav ul li a:hover {
+    color: #ff5a5f;       /* Colore del testo al passaggio del mouse */
+    text-decoration: underline; /* Sottolineatura al passaggio del mouse */
+}
+
+/* Aggiungi un colore di evidenza alla voce di menu attiva */
+nav ul li a:active, nav ul li a.active {
+    color: #ff5a5f;       /* Colore del testo quando attivo */
+    text-decoration: underline; /* Sottolineatura quando attivo */
+}
+
+/* BOOKING FORM STYLES */
+.booking-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.booking-form h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.booking-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="number"],
+.booking-form input[type="date"],
+.booking-form input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.booking-form button:hover {
+  background-color: #e14d4e;
+}
+
+/* PRIVACY CHECKBOX */
+.booking-form label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+/* BOOKINGS LIST PAGE */
+.prenotazioni-list ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.prenotazioni-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prenotazioni-list li span {
+  font-weight: bold;
+}
+
+.prenotazioni-list li button {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.prenotazioni-list li button:hover {
+  background-color: #e14d4e;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .booking-form {
+    padding: 15px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .prenotazioni-list li {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 20px; /* Riduce il padding sui dispositivi mobili */
+    }
+
+    h1 {
+        font-size: 20px; /* Riduce la dimensione del titolo sui dispositivi mobili */
+    }
+
+    h2 {
+        font-size: 16px; /* Riduce la dimensione dei sottotitoli sui dispositivi mobili */
+    }
+
+    p {
+        font-size: 14px; /* Riduce la dimensione dei paragrafi sui dispositivi mobili */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Feedback Message */
+/* Stile per i messaggi di feedback */
+.feedback {
+  display: none;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.feedback.show {
+  display: block;
+}
+
+.feedback.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.feedback.error {
+  background-color: #f44336;
+  color: white;
+}
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#feedback-message.success {
+  background-color: #4caf50;
+}
+
+#feedback-message.error {
+  background-color: #f44336;
+}
+
+#feedback-message.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Stile del footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer .social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.site-footer .social-links li {
+    display: inline;
+}
+
+.site-footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer .social-links a:hover {
+    color: #ff6347; /* Cambia colore al passaggio del mouse */
+}
+
+/* Stile generale della tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Stile del pulsante elimina */
+button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #e04e51;
+}
