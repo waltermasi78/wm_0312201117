@@ -34,3 +34,7 @@ La struttura dei file e delle cartelle è la seguente:
 │ └── app.js   
 │ └── logo.png   
 │ └── favicon.ico  
+
+## Licenza
+
+Questo progetto è concesso in licenza sotto la **MIT License**. Per maggiori dettagli, consulta il file [LICENSE](./LICENSE.txt).
