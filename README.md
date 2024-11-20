@@ -31,8 +31,7 @@ La struttura dei file e delle cartelle è la seguente:
 │ └── area-riservata.html   
 └── static/   
 │ ├── styles.css   
-│ └── app.js   
-│ └── logo.png   
+│ └── app.js      
 │ └── favicon.ico  
 
 ## Licenza
